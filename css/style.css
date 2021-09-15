@@ -17,18 +17,17 @@
 
 body{
     position: relative;
-    max-width: 1440px;
-    min-width: 350px;
-    margin: 0 auto;
-    padding: 10% 10px;
+    max-width: 1440px; min-width: 350px; width: 100%;
+    min-height: 100vh; margin: 0 auto;
+    background-color: var(--dark-cyan);
     background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; justify-content: center;
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 400; font-size: 15px;
-    text-align: center;
-    line-height: 1.5;
+    text-align: center; line-height: 1.5;
     color: var(--dark-grayish-blue);
 }
 
@@ -39,12 +38,14 @@ main {
     position: relative;
     width: 100%;
     max-width: 400px;
+    margin: 50px 10px;
     border-radius: 10px;
     padding-top: 150px;
     background: #fff url('../images/bg-pattern-card.svg') no-repeat top left;
     background-size: 100% 150px;
     text-align: center;
 }
+
 
 /* Image - Person */
 main img.person {
@@ -69,8 +70,9 @@ main div.personal-info h1 span { color: var(--dark-grayish-blue); font-weight: 4
 main div.socials {
     margin-top: 30px;
     padding: 30px;
-    border-top: 1px solid var(--dark-gray);
+    border-top: 1px solid hsla(0, 0%, 59%, 0.5);
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
 }
 main div.socials > p { font-size: 0.9em; }
@@ -79,6 +81,7 @@ main div.socials > p { font-size: 0.9em; }
 footer.attribution {
     position: absolute;
     bottom: 0; left: 0;
+    height: 50px;
     width: 100%;
     padding: 10px;
     font-size: 11px;
